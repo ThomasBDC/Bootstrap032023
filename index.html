@@ -8,13 +8,36 @@
     <link rel="stylesheet" href="/assets/css/styles.css"/>
   </head>
   <body>
-    <main class="container">
-      <div class="bg-dark text-light p-2">
-        MA NAVBAR
-      </div>
-      <div class="row">
-        <aside class="list-categories mt-3 col-12 col-lg-3">
+    <header>
+      <div class="bg-dark text-light p-2 d-flex justify-content-between">
+        MA NAVBAR 
 
+        <button type="button" class="btn btn-secondary position-relative rounded-pill">
+          <i class="bi bi-cart"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            3
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </button>
+      </div>
+    </header>
+    <main class="container">
+      <div class="row mt-3 d-none d-sm-block">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+            <li class="breadcrumb-item"><a href="#">Accessoires tech</a></li>
+            <li class="breadcrumb-item"><a href="#">Audio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Microphones</li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="row">
+        <aside class="list-group mt-3 col-12 col-lg-3 list-categories p-2 flex-lg-column flex-row overflow-auto">
+            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+              Rode
+            </a>
         </aside>
 
         <section class="list-articles mt-3 text-center col-12 col-lg-9">

@@ -1,22 +1,4 @@
-.list-categories{
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-}
-
-@media screen and (min-width:992px) {
-  .list-categories{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    overflow-x: hidden;
-}
-}
-
-.list-categories .categorie{
-  white-space: nowrap;
-  margin: 10px 15px;
-}
+@import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 
 img{
   max-width: 100%;
@@ -24,4 +6,17 @@ img{
 
 h2{
   font-size: 20px;
+}
+
+.btn.btn-primary{
+  background-color: #7700ff;
+  border-color: #7700ff;
+}
+
+.btn.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn.btn-primary:visited{
+  background-color: #3d0083;
+  border-color: #3d0083;
 }
