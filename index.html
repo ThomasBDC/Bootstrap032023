@@ -5,13 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
   </head>
   <body>
     <header>
-      <nav class="navbar fixed-top bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Fixed top</a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Ma boutique</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Micros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Camera</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Stream</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Promotions
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">-50%</a></li>
+                  <li><a class="dropdown-item" href="#">-30%</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Invendus</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div>
+                <div class="d-inline-block"
+                  data-bs-toggle="tooltip" title="Mon panier"
+                  data-bs-placement="bottom" >
+                  <button class="btn btn-outline-primary" 
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalPanier">
+                    <i class="bi bi-cart-fill"></i>
+                  </button>
+                </div>
+                <div class="d-inline-block"
+                  data-bs-toggle="tooltip" title="Me connecter"
+                  data-bs-placement="bottom" >
+                  <button class="btn btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalConnexion">
+                      <i class="bi bi-person-circle"></i>
+                  </button>
+                </div>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -44,7 +94,93 @@
 
 
     </main>
+
+    <!-- Modal Panier -->
+    <div class="modal fade" id="modalPanier" tabindex="-1" aria-labelledby="modalPanierLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalPanierLabel">Mon panier</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Micro (50€)
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Description du micro</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Camera (100€)
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Description de la caméra
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Clé usb (5€)
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Description de la clé
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2">
+                <b>Total : 155€ TTC</b>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Retour</button>
+            <button type="button" class="btn btn-primary">Valider le panier</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Connexion -->
+    <div class="modal fade" id="modalConnexion" tabindex="-1" aria-labelledby="modalConnexionLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalConnexionLabel">Me connecter</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="password">
+              </div>
+              <div>
+                <button class="btn btn-outline-success">Connexion</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
   </body>
 </html>

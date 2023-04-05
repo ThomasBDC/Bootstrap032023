@@ -1,5 +1,9 @@
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 
+body{
+  padding-top: 50px;
+}
+
 img{
   max-width: 100%;
 }
