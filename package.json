@@ -1,0 +1,25 @@
+{
+  "name": "Bootstrap032023",
+  "version": "1.0.0",
+  "description": "Pour pouvoir coder sur cette app, il faut exéctuer la commande npm install",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap-icons": "^1.10.3",
+    "bootstrap": "^5.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasBDC/Bootstrap032023.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThomasBDC/Bootstrap032023/issues"
+  },
+  "homepage": "https://github.com/ThomasBDC/Bootstrap032023#readme"
+}
