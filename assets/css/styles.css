@@ -11,16 +11,3 @@ img{
 h2{
   font-size: 20px;
 }
-
-.btn.btn-primary{
-  background-color: #7700ff;
-  border-color: #7700ff;
-}
-
-.btn.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn.btn-primary:visited{
-  background-color: #3d0083;
-  border-color: #3d0083;
-}
